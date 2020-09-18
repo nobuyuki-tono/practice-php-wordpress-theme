@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>PHP for WordPress</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Varela+Round" rel="stylesheet">
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
 </head>
+
 <body>
 
   <header id="masthead">
@@ -18,12 +20,14 @@
     <?php
 
       // Create an array of post objects using the display_post function
-
+        $posts = ['test1', 'test2' , 'test3'];
 
       // Loop through array of posts and display each one on the page
 
         // Call the display_title function and pass it the $post
-
+        foreach($posts as $post) {
+          display_title($post);
+        };
 
       /**
        * Custom function for displaying the title and content for a post
@@ -33,12 +37,14 @@
       function display_title( $title ) {
 
         // Echo an <h3> tag with the $title inside
+        echo "<h3>$title</h3>";
 
-      }
+    }
 
     ?>
 
   </div>
 
 </body>
+
 </html>
