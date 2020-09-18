@@ -18,11 +18,13 @@
 
       // Create a variable called $name and assign it your name
        $name = 'Zac';
+       $first = "Zac";
+       $last = "Gordon"
     ?>
 
     <h2>Welcome!</h2>
 
-    <p>My name is "<?php echo $name ?>."</p>
+    <p>My name is "<?php echo $first . " " . $last; ?>."</p>
 
   </div>
 </body>
