@@ -25,7 +25,7 @@
     <?php endwhile; else: // End while and start else ?>
 
     <!-- Display a 404 message here -->
-    <?php _e( "Sorry! No content found!" ) ?>
+    <?php _e( "Sorry! No content found!","phpforwp"); ?>
 
     <?php endif;  // End if ?>
 
