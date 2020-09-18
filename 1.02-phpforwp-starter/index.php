@@ -9,7 +9,7 @@
   <body>
 
     <header id="masthead">
-      <h1><a href="#">PHP for WordPress</a></h1>
+      <h1><a href="#">PHP for WordPress !!</a></h1>
     </header>
 
     <div id="content">
@@ -17,12 +17,12 @@
     <?php
 
       // Create a variable called $name and assign it your name
-
+       $name = 'Zac';
     ?>
 
     <h2>Welcome!</h2>
 
-    <p>My name is "<?php // echo $name variable here ?>."</p>
+    <p>My name is "<?php echo $name ?>."</p>
 
   </div>
 </body>
