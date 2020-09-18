@@ -7,8 +7,26 @@
 
   <!-- Add any post template tags inside of loop -->
 
-  <h2><?php the_title(); ?></h2>
-  <?php the_content(); ?>
+  <article <?php post_class(); ?>>
+    <h2><?php the_title(); ?></h2>
+    <?php the_content(); ?>
+
+    <footer>
+      <p class="byline">
+        Author: <a href="<?php echo get_author_posts_url($post->post_author) ?>">
+          <?php the_author(); ?>
+        </a>
+        Date:
+        <?php the_time('M. j, Y'); ?>
+        Categories:
+        <?php the_category( ',' ); ?>
+        Tags:
+        <?php the_tags( '' , '', ''); ?>
+      </p>
+    </footer>
+  </article>
+
+
 
   <?php endwhile; else: ?>
 
