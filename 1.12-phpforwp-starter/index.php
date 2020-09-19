@@ -1,27 +1,78 @@
 <?php get_header(); ?>
 
-    <div id="content">
+<div id="content">
 
-      <!-- Static Front Page -->
+  <!-- Static Front Page -->
 
-      <!-- Blog Home -->
+  <?php if( is_front_page() && !is_home() ): ?>
 
-      <!-- Page (Not Front Page) -->
+  <h1>Static Front Page</h1>
 
-      <!-- Single Post -->
+  <?php endif; ?>
+  <!-- Blog Home -->
 
-      <!-- Single Attachment (Media) -->
+  <?php if( is_home() ): ?>
 
-      <!-- Category Archive -->
+  <h1>Blog Home</h1>
 
-      <!-- Tag Archive -->
+  <?php endif; ?>
+  <!-- Page (Not Front Page) -->
+  <?php if( is_page() && !is_front_page() ): ?>
 
-      <!-- Author Archive -->
+  <h1>This is page</h1>
 
-      <!-- Date Archive -->
+  <?php endif; ?>
 
-      <!-- 404 Page -->
+  <!-- Single Post -->
+  <?php if( is_single() && !is_attachment() ): ?>
 
-    </div>
+  <h1>Single post</h1>
+
+  <?php endif ?>
+
+  <!-- Single Attachment (Media) -->
+  <?php if( is_attachment() ): ?>
+
+  <h1>Attachment</h1>
+
+  <?php endif ?>
+
+  <!-- Category Archive -->
+  <?php if( is_category() ): ?>
+
+  <h1><?php single_cat_title(); ?></h1>
+
+  <?php endif; ?>
+
+  <!-- Tag Archive -->
+  <?php if( is_tag() ): ?>
+
+  <h1><?php single_tag_title(); ?></h1>
+
+  <?php endif; ?>
+
+  <!-- Author Archive -->
+  <?php if( is_author() ): ?>
+
+  <h1><?php the_archive_title(); ?></h1>
+
+  <?php endif; ?>
+
+  <!-- Date Archive -->
+  <?php if( is_date() ): ?>
+
+  <h1><?php single_cat_title(); ?></h1>
+
+  <?php endif; ?>
+
+  <!-- 404 Page -->
+
+  <?php if( is_404() ): ?>
+
+  <h1>Page not found</h1>
+
+  <?php endif; ?>
+
+</div>
 
 <?php get_footer(); ?>
