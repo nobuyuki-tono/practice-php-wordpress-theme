@@ -4,14 +4,19 @@
  * Enqueue the theme stylesheets
  */
 function phpforwp_theme_styles() {
-
+  
   // Enqueue google fonts https://fonts.googleapis.com/css?family=Open+Sans|Varela+Round
+
+  wp_enqueue_style('font-css','https://fonts.googleapis.com/css?family=Open+Sans|Varela+Round
+  ');
+
   // Enque main style sheet (make dependent on google fonts)
+  wp_enqueue_style('main.css', get_stylesheet_uri(  ), [ 'font-css' ], get_the_time() );
 
 }
 // Add phpforwp_theme_styles function to wp_enqueue_scripts action hook
 // with a priority of 10
-add_action( '', '', 0 );
+add_action( 'wp_enqueue_scripts', 'phpforwp_theme_styles', 10 );
 
 
 /**
