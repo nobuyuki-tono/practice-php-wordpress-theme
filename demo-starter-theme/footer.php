@@ -11,24 +11,28 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'demo-starter-theme' ) ); ?>">
-				<?php
+<footer id="colophon" class="site-footer">
+  <div class="site-info">
+    <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'demo-starter-theme' ) ); ?>">
+      <?php
 				/* translators: %s: CMS name, i.e. WordPress. */
 				printf( esc_html__( 'Proudly powered by %s', 'demo-starter-theme' ), 'WordPress' );
 				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
+    </a>
+    <span class="sep"> | </span>
+    <?php
 				/* translators: 1: Theme name, 2: Theme author. */
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'demo-starter-theme' ), 'demo-starter-theme', '<a href="http://underscores.me/">John Doe</a>' );
 				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+  </div><!-- .site-info -->
+  <div class="custom-footer">
+    <?php esc_html_e('MY CUSTOME FOOTER TEXT', 'demo-starter-theme') ?>
+  </div>
+</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
 
 </body>
+
 </html>
