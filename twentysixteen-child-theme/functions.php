@@ -2,8 +2,8 @@
   
 
   function twenty_sixteen_child_theme_enqueue_styles(){
-    wp_enqueue_style('parent-style', get_template_directory_uri(  ), '/style.css');
-    wp_enqueue_style(' main-css ', get_stylesheet_directory_uri(), '/style.css');
+    wp_enqueue_style('parent-style', get_template_directory_uri( ) . '/style.css');
+    wp_enqueue_style(' main-css ', get_stylesheet_directory_uri() . '/style.css');
   }
 
 
