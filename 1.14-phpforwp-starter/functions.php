@@ -29,15 +29,20 @@ function phpforwp_read_more_link( $excerpt ) {
 
   // Create a variable called $extended_excerpt and
   // assign it the value of $excerpt
+  $extended_excerpt = $excerpt;
 
   // Append a read more link using get_permalink() as the url
+  $extended_excerpt .= ' <a href="' . get_permalink() . '">';
+  $extended_excerpt .= 'Read More &raquo;';
+  $extended_excerpt .= '</a>';
 
   // Return $extended_excerpt
+  return $extended_excerpt;
 
 }
 // Add phpforwp_read_more_link function to the get_the_excerpt
 // with a priority of 10
-add_filter( '', '', 0 );
+add_filter( 'get_the_excerpt', 'phpforwp_read_more_link', 10 );
 
 
 ?>
