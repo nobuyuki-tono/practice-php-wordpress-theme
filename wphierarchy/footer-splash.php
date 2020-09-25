@@ -2,6 +2,10 @@
   <p>Don't forget sign up!</p>
 </div>
 
+</div> <!-- #content -->
+
+</div> <!-- #page -->
+
 <?php wp_footer(); ?>
 </body>
 
