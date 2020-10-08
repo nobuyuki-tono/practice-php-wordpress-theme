@@ -14,4 +14,10 @@
     <?php the_content(); ?>
 
   </div>
+
+
+  <?php comment_template(); ?>
+
+
+
 </article>
