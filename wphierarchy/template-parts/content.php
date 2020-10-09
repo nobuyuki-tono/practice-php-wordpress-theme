@@ -11,12 +11,16 @@
 
   <div class="entry-content">
 
+
+
     <?php the_content(); ?>
 
   </div>
 
+  <?php if( comments_open ): ?>
 
   <?php comment_template(); ?>
+  <?php endif; ?>
 
 
 
