@@ -14,7 +14,9 @@
 
     <?php endif; ?>
 
-    <p>Template: index.php</p>
+    <h1>Hello world</h1>
+
+    <p>Template: index.php　for practice</p>
 
 
   </main>
